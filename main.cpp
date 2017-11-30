@@ -112,8 +112,8 @@ num_t eval(std::string s)
 		else if (isactchar(s[i])) {
 			while (!act_stack.empty() && priority(act_stack.top()) >= priority(s[i])) 
 				make_action(num_stack, act_stack);
-				act_stack.push(s[i]);
-				unary = true;
+			act_stack.push(s[i]);
+			unary = true;
 		}
 		else if (s[i] == '(')
 			act_stack.push('('), unary = true;
